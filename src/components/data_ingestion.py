@@ -5,6 +5,7 @@ from dataclasses import dataclass
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from data_transformation import * 
+from model_trainer import *
 
 @dataclass
 class data_ingestion_config:
@@ -40,6 +41,10 @@ if __name__=="__main__":
     train_data_path,test_data_path=data_ingestion_obj.initiate_data_ingestion()
     data_transformation_obj=data_transformation()
     train_ar,test_arr,_=data_transformation_obj.initiate_data_transoformation(train_data_path,test_data_path)
+    model_trainer_object=model_trainer()
+    Model_Score=model_trainer_object.initiate_model_trainer(train_ar,test_arr)
+
+
 
 
 

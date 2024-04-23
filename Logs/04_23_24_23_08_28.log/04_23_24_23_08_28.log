@@ -1,0 +1,3 @@
+INFO:root:Data ingestion started and entered the block of data ingestion
+INFO:root:Started data transformation
+INFO:root:Entering the preprocessor object path
