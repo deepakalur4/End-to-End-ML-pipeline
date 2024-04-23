@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: End-to-End-ML-Pipeline
+Version: 0.0.0.0
+Author: Deepak S Alur
+Author-email: deepakalur4@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: setuptools
+Requires-Dist: scikit-learn
