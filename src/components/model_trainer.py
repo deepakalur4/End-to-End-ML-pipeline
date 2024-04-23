@@ -13,6 +13,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.naive_bayes import GaussianNB
 from src.utils import evaluate_model
 from sklearn.metrics import r2_score
+from src.utils import save_object
 
 @dataclass
 class model_trainer_config:
@@ -49,6 +50,8 @@ class model_trainer:
             best_model=models[best_model_name[0]]
 
             y_pred=best_model.predict(X_test)
+
+            save_object(file_path=self.model_trainer.model_file_path,obj=best_model)
             
             return r2_score(Y_test,y_pred)
 
